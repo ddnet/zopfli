@@ -379,7 +379,7 @@ int ZopfliPNGOptimize(const std::vector<unsigned char>& origpng,
   lodepng::State inputstate;
   error = lodepng::decode(image, w, h, inputstate, origpng);
 
-  bool keep_colortype = false;
+  bool keep_colortype = true;
 
   if (!png_options.keepchunks.empty()) {
     // If the user wants to keep the non-essential chunks bKGD or sBIT, the
